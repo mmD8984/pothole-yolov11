@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+env_pothole310/
+env_conda311/
+
+# PyCharm
+.idea/
+*.iml
+
+# Dataset / Model
+*.pt
+*.weights
+dataset/
+*.jpg
+*.png
+*.mp4
+
+# Logs
+*.log
+runs/
