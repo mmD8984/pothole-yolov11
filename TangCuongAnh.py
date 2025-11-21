@@ -54,4 +54,4 @@ for img_path in glob(INPUT_DIR + "/*.jpg"):
     flipped = flip_image(img)
     cv2.imwrite(f"{OUTPUT_DIR}/{name}_flip.jpg", flipped)
 
-print("✔ Tăng cường dữ liệu hoàn tất!")
+print("Tăng cường dữ liệu hoàn tất!")
