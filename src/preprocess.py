@@ -10,7 +10,7 @@ from tqdm import tqdm  # Để hiển thị thanh tiến trình
 # OUTPUT_DIR = "../dataset/pothole_dataset/train/images_preprocessed_416"  # Thư mục lưu ảnh đã xử lý
 INPUT_DIR = "../test"
 OUTPUT_DIR = "../test_rs"
-IMG_SIZE = 416  # Resize về 416x416 như yêu cầu
+IMG_SIZE = 416  # Resize về 416x416
 
 # Tạo thư mục đầu ra
 Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)

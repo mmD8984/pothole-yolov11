@@ -15,7 +15,7 @@ env_conda311/
 # Dataset / Model
 *.pt
 *.weights
-dataset/
+src/dataset/
 *.jpg
 *.png
 *.mp4
