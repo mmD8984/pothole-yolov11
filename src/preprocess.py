@@ -6,20 +6,20 @@ from pathlib import Path
 from tqdm import tqdm  # Để hiển thị thanh tiến trình
 
 # ================== CẤU HÌNH ==================
-# INPUT_DIR = "../dataset/pothole_dataset/train/images"      # Thư mục ảnh gốc
-# OUTPUT_DIR = "../dataset/pothole_dataset/train/images_preprocessed_416"  # Thư mục lưu ảnh đã xử lý
-INPUT_DIR = "../test"
-OUTPUT_DIR = "../test_rs"
-IMG_SIZE = 416  # Resize về 416x416 như yêu cầu
+# INPUT_DIR = "dataset/pothole_dataset/train/images"      # Thư mục ảnh gốc
+# OUTPUT_DIR = "dataset/pothole_dataset/train/images_preprocessed_416"  # Thư mục lưu ảnh đã xử lý
+INPUT_DIR = "test"
+OUTPUT_DIR = "test_rs"
 
 # Tạo thư mục đầu ra
+Path(INPUT_DIR).mkdir(parents=True, exist_ok=True)
 Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
-
 # ===============================================
 def preprocess_and_save(image_path, save_path):
     """
     Đọc ảnh → Resize về 416x416 → Chuẩn hóa [0,1] → Lưu lại
     """
+    IMG_SIZE = 416  # Resize về 416x416
     img = cv2.imread(image_path)
     if img is None:
         print(f"Không đọc được: {image_path}")
